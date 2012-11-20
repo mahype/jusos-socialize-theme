@@ -1,0 +1,148 @@
+/*
+Theme Name: Jusos Socialize Theme
+Theme URI: http://jusos.me
+Author: Jusos Kreisverband Mettmann
+Author URI: http://jusos.me
+Description: Ein einfaches Theme mit wenig Wartungsaufwand für Juso Gliederungen
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: jusos, politik, juso gliederungen
+Text Domain: jusos-socialize-theme
+*/
+
+/*
+ * General
+ */
+body{
+	margin:0;
+	padding:0;
+	background-image: url( 'images/bg-pattern.png' );
+}
+img{
+	border:0;
+}
+a{
+	text-decoration:none;
+}
+address{
+	font-style:normal;
+}
+h1, h2, h3, h4, h5, h6, article{
+	margin:0;
+}
+header,
+#wrapper{
+	width: 800px;
+	margin: auto;
+}
+/*
+ * Skeleton
+ */
+#page{
+	margin: 0;
+	width: 100%;
+	height: 540px;
+	background-repeat: repeat-x;
+	background-image: url( 'images/bg-gradient.png' );
+	font-family: Arial, Helvetica, sans-serif;
+}
+#logo{
+	background-color: #ee1c24;
+	height: 100px;
+    width: 200px;
+}
+#logo img{
+	margin: 39px 0 0 69px;
+}
+
+#wrapper{
+}
+#content{
+	margin: 50px 0 0 0;
+	background-color: #FFF;
+	width:550px;
+	float:left;
+}
+
+/*
+ * Sidebar
+ */
+#sidebar{
+	width:200px;
+	float:right;
+	margin: 50px 0 0 50px;
+	background-color: #FFF;
+}
+#sidebar ul{
+	padding:0;
+	margin:0;
+}
+#sidebar li{
+	list-style-type:none;
+	line-height:50px;
+	height:50px;
+}
+#sidebar .widget{
+	margin-bottom:20px;
+	padding:0;
+	background-color: #FFF;
+	font-size:14px;
+	overflow:hidden;
+}
+#sidebar .widgettitle{
+	padding: 0 10px 8px 10px;
+	margin: 0;
+	font-size:16px;
+}
+#sidebar .widget_nav_menu .menu-item{
+	border-bottom: #FFF 1px solid;
+	background-repeat: no-repeat;
+	background-position:10px 6px;
+}
+#sidebar .widget_nav_menu .menu-item a{
+	text-decoration:none;
+	padding:10px 10px 10px 45px;
+	display:block;
+}
+
+.entry-content{
+	margin: 25px 25px 0 25px;
+}
+.home-content header{
+	background-color: #e0e0e0;
+	min-height:50px;
+	width: 550px;
+	line-height:50px;
+	margin: -4px 0 0;
+}
+.home-content header h1{
+    font-size: 18px;
+    font-weight: normal;
+}
+.home-content .entry-header #icon-page{
+	background-color: #ee1c24;
+	color: #FFF;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	font-size: 25pt;
+	float:left;
+	line-height: 46px;
+	margin: 0 25px 0 0;
+}	
+
+/*
+ * Helper Classes
+ */
+.alignleft{
+	float:left;
+	clear:left;
+	margin: 0 10px 10px 0;
+}
+.alignright{
+	float:right;
+	clear:right;
+	margin: 0 0 10px 10px;
+}
+.clear{ clear:both; }
