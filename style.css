@@ -61,16 +61,16 @@ header,
 #content{
 	margin: 50px 0 0 0;
 	background-color: #FFF;
-	width:550px;
-	float:left;
+	width: 550px;
+	float: left;
 }
 
 /*
  * Sidebar
  */
 #sidebar{
-	width:200px;
-	float:right;
+	width: 200px;
+	float: right;
 	margin: 50px 0 0 50px;
 	background-color: #FFF;
 }
