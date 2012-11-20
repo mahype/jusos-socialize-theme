@@ -15,8 +15,8 @@ Text Domain: jusos-socialize-theme
  * General
  */
 body{
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 	background-image: url( 'images/bg-pattern.png' );
 }
 img{
