@@ -111,9 +111,9 @@ header,
 }
 .home-content header{
 	background-color: #e0e0e0;
-	min-height:50px;
+	min-height: 50px;
 	width: 550px;
-	line-height:50px;
+	line-height: 50px;
 	margin: -4px 0 0;
 }
 .home-content header h1{
