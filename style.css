@@ -20,13 +20,13 @@ body{
 	background-image: url( 'images/bg-pattern.png' );
 }
 img{
-	border:0;
+	border: 0;
 }
 a{
-	text-decoration:none;
+	text-decoration: none;
 }
 address{
-	font-style:normal;
+	font-style: normal;
 }
 h1, h2, h3, h4, h5, h6, article{
 	margin:0;
