@@ -129,7 +129,8 @@ header,
 	line-height: 50px;
 }
 #sidebar .widget_nav_menu .menu-item,
-#sidebar .widget_pages .page_item, 
+#sidebar .widget_pages .page_item,
+#sidebar .widget_categories li,
 #sidebar .widget_recent_entries li,
 #sidebar .widget_recent_comments li,
 #sidebar .widget_meta li,
@@ -142,6 +143,7 @@ header,
 }
 #sidebar .widget_nav_menu .menu-item a,
 #sidebar .widget_pages .page_item a,
+#sidebar .widget_categories li a,
 #sidebar .widget_recent_entries li a,
 #sidebar .widget_meta li a,
 #sidebar .widget_links li a,
@@ -159,6 +161,7 @@ header,
 }
 #sidebar .widget_nav_menu a:hover,
 #sidebar .widget_pages a:hover,
+#sidebar .widget_categories a:hover,
 #sidebar .widget_recent_entries a:hover,
 #sidebar .widget_meta a:hover{
 	background-image: url( 'images/square-50x50-purple.png' ) !important;
@@ -182,7 +185,8 @@ header,
 	font-size: 12px;
 }
 #sidebar .widget_nav_menu .current-menu-item a,
-#sidebar .widget_pages .current_page_item a{
+#sidebar .widget_pages .current_page_item a,
+#sidebar .widget_categories .current-cat a{
 	background-image: url( 'images/square-50x50-red.png' ) !important;
 	background-repeat: repeat-y;
 	color: #EE1C24;
@@ -231,6 +235,19 @@ header,
 }
 #sidebar label{
 	font-size: 14px;
+}
+/*
+ * Sidebar Calendar Widget
+ */
+#sidebar .widget_calendar #wp-calendar{
+	width:200px;
+	text-align: center;
+	
+}
+#sidebar #calendar_wrap{
+	background-image: url( 'images/square-50x50-grey.png' ) !important;
+	background-repeat: repeat-y;
+	padding: 0 50px 25px 70px;
 }
 /*
  * Sidebar Facebook Widget
