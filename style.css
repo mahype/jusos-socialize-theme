@@ -24,6 +24,10 @@ img{
 }
 a{
 	text-decoration: none;
+	color: #8c8c8c;
+}
+a:hover{
+	color: #b74c94;
 }
 address{
 	font-style: normal;
@@ -33,19 +37,24 @@ h1, h2, h3, h4, h5, h6, article{
 }
 header,
 #wrapper{
-	width: 800px;
+	width: 900px;
 	margin: auto;
 }
+
 /*
- * Skeleton
+ * Header
  */
-#page{
-	margin: 0;
-	width: 100%;
-	height: 540px;
-	background-repeat: repeat-x;
-	background-image: url( 'images/bg-gradient.png' );
-	font-family: Arial, Helvetica, sans-serif;
+#branding{
+}
+#blog_name{
+	line-height:100px;
+	float:right;
+	width:650px;
+	padding-left: 50px;
+	font-size:30px;
+	text-align: left;
+	color: #ee1c24;
+	font-weight:800;
 }
 #logo{
 	background-color: #ee1c24;
@@ -56,6 +65,20 @@ header,
 	margin: 39px 0 0 69px;
 }
 
+/*
+ * Skeleton
+ */
+#page{
+	margin: 0;
+	width: 100%;
+	height: 540px;
+	background-repeat: repeat-x;
+	background-image: url( 'images/bg-gradient.png' );
+	font-family: 'Open Sans', Arial;	
+	font-size:13px;
+	color: #8c8c8c;
+}
+
 #wrapper{
 }
 #content{
@@ -63,16 +86,16 @@ header,
 	background-color: #FFF;
 	width: 550px;
 	float: left;
+	margin-bottom: 50px;
 }
 
 /*
  * Sidebar
  */
 #sidebar{
-	width: 200px;
+	width: 300px;
 	float: right;
 	margin: 50px 0 0 50px;
-	background-color: #FFF;
 }
 #sidebar ul{
 	padding:0;
@@ -80,34 +103,96 @@ header,
 }
 #sidebar li{
 	list-style-type:none;
-	line-height:50px;
-	height:50px;
 }
+/*
+ * Widgets
+ */
 #sidebar .widget{
-	margin-bottom:20px;
-	padding:0;
+	margin: 0 0 50px 0;
 	background-color: #FFF;
-	font-size:14px;
-	overflow:hidden;
 }
 #sidebar .widgettitle{
-	padding: 0 10px 8px 10px;
-	margin: 0;
-	font-size:16px;
+	min-height: 50px;
+	line-height: 50px;
+	padding: 0 50px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #b74c94;
 }
-#sidebar .widget_nav_menu .menu-item{
-	border-bottom: #FFF 1px solid;
-	background-repeat: no-repeat;
-	background-position:10px 6px;
+#sidebar .widget_nav_menu .menu-item,
+#sidebar .widget_pages .page_item, 
+#sidebar .widget_recent_entries li,
+#sidebar .widget_recent_comments li,
+#sidebar .widget_meta li,
+#sidebar .widget_links li{
+	line-height: 50px;
+	min-height: 50px;
+	font-size: 14px;
+	border-bottom: 1px solid #e0e0e0;
+	padding: 0;
 }
-#sidebar .widget_nav_menu .menu-item a{
-	text-decoration:none;
-	padding:10px 10px 10px 45px;
-	display:block;
+#sidebar .widget_nav_menu .menu-item a,
+#sidebar .widget_pages .page_item a,
+#sidebar .widget_recent_entries li a,
+#sidebar .widget_meta li a,
+#sidebar .widget_links li a,
+#sidebar .widget_recent_comments li,
+#sidebar .widget_search #searchform{
+	display: block;
+	padding: 0 0 0 50px;
 }
-
+#sidebar .widget_nav_menu div{
+	min-height: 50px;
+}
+#sidebar .widget li a{
+	min-height: 50px;
+	line-height: 50px;
+}
+#sidebar .widget a:hover{
+	color: #b74c94;
+}
+.social-button,
+.tagcloud,
+.widget ul li{
+	min-height: 50px;
+	padding: 0 50px;
+	font-size: 14px;
+	vertical-align: center;
+}
+#sidebar .widget_pages .page_item .children li{
+	min-height: 25px;
+	line-height: 25px;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: none;
+	margin-left:50px;
+}
+#sidebar .social-button{
+    min-height: 35px;
+    padding-top: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+#sidebar .tagcloud,
+#sidebar .widget_search #searchform{
+	padding-bottom: 25px;
+}
+#searchform div{
+	padding-right:50px;
+}
+#searchsubmit{
+	margin-top: 25px;
+}
+#sidebar .widget_text div{
+	padding: 0 50px 25px 50px;
+}
+#sidebar label{
+	font-size: 14px;
+}
+/*
+ * Content
+ */
 .entry-content{
 	margin: 25px 25px 0 25px;
+	padding-bottom: 25px;
 }
 .home-content header{
 	background-color: #e0e0e0;
@@ -130,7 +215,33 @@ header,
 	float:left;
 	line-height: 46px;
 	margin: 0 25px 0 0;
-}	
+}
+/*
+ * Forms
+ */
+input,
+textarea{
+	background-color: #FFF;
+	border: 0.1em dashed #b74c94;
+	padding: 0.5em;
+}
+input[type="submit"]{
+	color: #b74c94;
+	padding: 5px;
+	cursor: pointer;
+	border: 0.1em solid #b74c94;
+}
+input[type="submit"]:hover{
+	color: #FFF;
+	background-color: #b74c94;
+	border: 0.1 em solid #b74c94;
+	padding: 5px;
+	cursor: pointer;
+}
+label{
+	display:block;
+	padding: 0 0 5px 0;
+}
 
 /*
  * Helper Classes

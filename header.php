@@ -33,6 +33,7 @@
 <link rel="stylesheet" type="text/css" media="only screen and (min-device-width:768px) and (max-device-width:1024px)" href="<?php bloginfo( 'stylesheet_directory' ); ?>/style-tablet.css" />
 <?php /* Mobile CSS */ ?>
 <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:720px)" href="<?php bloginfo( 'stylesheet_directory' ); ?>/style-mobile.css" />
+<link href='http://fonts.googleapis.com/css?family=Average+Sans|Open+Sans:700,400,800,400italic' rel='stylesheet' type='text/css'>
 <?php 
 
 ?>
@@ -60,6 +61,7 @@ body{
 	<div id="page">
 		<div id="wrapper">
 			<header id="branding" role="banner">
+				<h1 id="blog_name"><?php bloginfo( 'name' ); ?></h1>
 				<hgroup>
 					<a href="<?php bloginfo( 'wpurl' ); ?>" title="<?php bloginfo( 'name' ); ?>"><h1 id="logo"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/jusos-logo-117x48.png" alt="<?php bloginfo( 'name' ); ?>" /></h1></a>
 				</hgroup>

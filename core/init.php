@@ -57,12 +57,12 @@ class Jusos_Socialize_Theme{
 	}
 	
 	public function nav_menus(){
-		register_nav_menu( 'footer', __( 'Footer Menu', 'pp-theme' ) );
+		register_nav_menu( 'footer', __( 'Footer Menu', 'jusos-socialize-theme' ) );
 	}
 	
 	public function sidebars(){
 		$args = array(
-			'name'          => sprintf( __( 'Sidebar %d', 'pp-theme' ), 1 ),
+			'name'          => sprintf( __( 'Sidebar %d', 'jusos-socialize-theme' ), 1 ),
 			'id'            => 'sidebar-1',
 			'description'   => '',
 		    'class'         => '',
@@ -75,7 +75,7 @@ class Jusos_Socialize_Theme{
 	}
 
 	public function widgets(){
-		// register_widget( 'PP_Social_Widget' );
+		register_widget( 'Jusos_Socialize_Social_Widget' );
 	}
 
 
@@ -87,17 +87,17 @@ class Jusos_Socialize_Theme{
 			'show_in_nav_menus' => FALSE,
 		    'hierarchical' => TRUE,
 		    'labels' => array(
-				'name' => _x( 'Categories', 'taxonomy general name', 'pp-theme' ),
-			    'singular_name' => _x( 'Category', 'taxonomy singular name', 'pp-theme' ),
-			    'search_items' =>  __( 'Search Categories', 'pp-theme' ),
-			    'all_items' => __( 'All Categories', 'pp-theme' ),
-			    'parent_item' => __( 'Parent Category', 'pp-theme' ),
-			    'parent_item_colon' => __( 'Parent Category:', 'pp-theme' ),
-			    'edit_item' => __( 'Edit Category', 'pp-theme' ), 
-			    'update_item' => __( 'Update Category', 'pp-theme' ),
-			    'add_new_item' => __( 'Add New Category', 'pp-theme' ),
-			    'new_item_name' => __( 'New Category', 'pp-theme' ),
-			    'menu_name' => __( 'Categories', 'pp-theme' ),
+				'name' => _x( 'Categories', 'taxonomy general name', 'jusos-socialize-theme' ),
+			    'singular_name' => _x( 'Category', 'taxonomy singular name', 'jusos-socialize-theme' ),
+			    'search_items' =>  __( 'Search Categories', 'jusos-socialize-theme' ),
+			    'all_items' => __( 'All Categories', 'jusos-socialize-theme' ),
+			    'parent_item' => __( 'Parent Category', 'jusos-socialize-theme' ),
+			    'parent_item_colon' => __( 'Parent Category:', 'jusos-socialize-theme' ),
+			    'edit_item' => __( 'Edit Category', 'jusos-socialize-theme' ), 
+			    'update_item' => __( 'Update Category', 'jusos-socialize-theme' ),
+			    'add_new_item' => __( 'Add New Category', 'jusos-socialize-theme' ),
+			    'new_item_name' => __( 'New Category', 'jusos-socialize-theme' ),
+			    'menu_name' => __( 'Categories', 'jusos-socialize-theme' ),
 			),	
 		    'show_ui' => TRUE,
 		    'query_var' => TRUE,
@@ -108,16 +108,16 @@ class Jusos_Socialize_Theme{
 		register_post_type( 'pp-references',
 			array(
 				'labels' => array(
-					'name' => __( 'References', 'pp-theme' ),
-					'singular_name' => __( 'Reference', 'pp-theme' ),
-					'all_items' => __( 'All References', 'pp-theme' ),
-					'add_new_item' => __( 'Add new Reference', 'pp-theme' ),
-					'edit_item' => __( 'Edit Reference', 'pp-theme' ),
-					'new_item' => __( 'Add new Reference', 'pp-theme' ),
-					'view_item' => __( 'View Reference', 'pp-theme' ),
-					'search_items' => __( 'Search References', 'pp-theme' ),
-					'not_found' => __( 'No Reference found', 'pp-theme' ),
-					'not_found_in_trash' => __( 'No Reference found', 'pp-theme' )
+					'name' => __( 'References', 'jusos-socialize-theme' ),
+					'singular_name' => __( 'Reference', 'jusos-socialize-theme' ),
+					'all_items' => __( 'All References', 'jusos-socialize-theme' ),
+					'add_new_item' => __( 'Add new Reference', 'jusos-socialize-theme' ),
+					'edit_item' => __( 'Edit Reference', 'jusos-socialize-theme' ),
+					'new_item' => __( 'Add new Reference', 'jusos-socialize-theme' ),
+					'view_item' => __( 'View Reference', 'jusos-socialize-theme' ),
+					'search_items' => __( 'Search References', 'jusos-socialize-theme' ),
+					'not_found' => __( 'No Reference found', 'jusos-socialize-theme' ),
+					'not_found_in_trash' => __( 'No Reference found', 'jusos-socialize-theme' )
 				),
 				'public' => TRUE,
 				'has_archive' => TRUE,
@@ -136,7 +136,7 @@ class Jusos_Socialize_Theme{
 	public function meta_boxes(){
 		// Sliders - Removing Featured image box and adding it with new title and position
 		// remove_meta_box( 'postimagediv', 'pp_sliders', 'side' );
-		// add_meta_box( 'postimagediv', __( 'Slider Image', 'pp-theme' ), 'post_thumbnail_meta_box', 'pp_sliders', 'normal', 'high' );
+		// add_meta_box( 'postimagediv', __( 'Slider Image', 'jusos-socialize-theme' ), 'post_thumbnail_meta_box', 'pp_sliders', 'normal', 'high' );
 	}
 
 	public function shortcodes(){
@@ -161,6 +161,7 @@ class Jusos_Socialize_Theme{
 		/**
 		 * Widgets
 		 */
+		include( JUSOS_SOCIALIZE_THEME_FOLDER . '/core/widgets/social.php' ); 
 		
 		/**
 		 * Meta Boxes
@@ -202,7 +203,7 @@ class Jusos_Socialize_Theme{
 	
 	public function admin_load_framework(){
 		/* Not needed yet
-		$args['forms'] = array( 'pp-theme-config' );
+		$args['forms'] = array( 'jusos-socialize-theme-config' );
 		$args['jqueryui_components'] = array( 'jquery-cookies', 'jquery-fileuploader', 'jquery-ui-tabs', 'jquery-colorpicker' );
 		tk_framework( $args );
 		*/

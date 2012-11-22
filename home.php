@@ -4,12 +4,10 @@
 				
 				<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/header-content-start.jpg" />
 				
-				<?php while ( have_posts() ) : the_post(); // loop entries ?>
-					
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article id="facebook-fanpage-stream" >
 					<header class="entry-header">
 						<div id="icon-page">@</div>
-						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<h1 class="entry-title"><?php _e( 'Facebook Page', 'jusos-socialize-theme' ); ?></h1>
 					</header>
 					
 					<div class="entry-content">
@@ -25,7 +23,6 @@
 					  fjs.parentNode.insertBefore(js, fjs);
 					}(document, 'script', 'facebook-jssdk'));</script>
 				</article>
-				<?php endwhile; // end of the loop. ?>
 				
 			</div>
 			
