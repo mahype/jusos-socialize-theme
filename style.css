@@ -159,7 +159,8 @@ header,
 	font-size: 14px;
 	vertical-align: center;
 }
-#sidebar .widget_pages .page_item .children li{
+#sidebar .widget_pages .page_item .children li,
+#sidebar .widget_nav_menu .menu-item .sub-menu li{
 	min-height: 25px;
 	line-height: 25px;
 	border-top: 1px solid #e0e0e0;
