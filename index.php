@@ -8,7 +8,7 @@
 					
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header">
-						<div id="icon-page">@</div>
+						<div id="icon-page">&nbsp;</div>
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 					</header>
 					
@@ -17,6 +17,9 @@
 					</div>
 					
 				</article>
+				
+				<?php comments_template(); ?>
+				
 				<?php endwhile; // end of the loop. ?>
 				
 			</div>

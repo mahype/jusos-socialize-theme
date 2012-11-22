@@ -87,6 +87,7 @@ header,
 	width: 550px;
 	float: left;
 	margin-bottom: 50px;
+	overflow: hidden;
 }
 
 /*
@@ -110,6 +111,7 @@ header,
 #sidebar .widget{
 	margin: 0 0 50px 0;
 	background-color: #FFF;
+	overflow: hidden;
 }
 #sidebar .widgettitle{
 	min-height: 50px;
@@ -118,6 +120,13 @@ header,
 	font-size: 18px;
 	font-weight: normal;
 	color: #b74c94;
+}
+#sidebar .widget a:hover{
+	color: #b74c94;
+}
+#sidebar .widget li a{
+	min-height: 50px;
+	line-height: 50px;
 }
 #sidebar .widget_nav_menu .menu-item,
 #sidebar .widget_pages .page_item, 
@@ -128,7 +137,7 @@ header,
 	line-height: 50px;
 	min-height: 50px;
 	font-size: 14px;
-	border-bottom: 1px solid #e0e0e0;
+	border-top: 1px solid #e0e0e0;
 	padding: 0;
 }
 #sidebar .widget_nav_menu .menu-item a,
@@ -136,20 +145,24 @@ header,
 #sidebar .widget_recent_entries li a,
 #sidebar .widget_meta li a,
 #sidebar .widget_links li a,
-#sidebar .widget_recent_comments li,
 #sidebar .widget_search #searchform{
 	display: block;
+	padding: 0 0 0 75px;
+	background-image: url( 'images/square-50x50-grey.png' );
+	background-repeat: repeat-y;
+}
+#sidebar .widget_recent_comments li{
 	padding: 0 0 0 50px;
 }
 #sidebar .widget_nav_menu div{
 	min-height: 50px;
 }
-#sidebar .widget li a{
-	min-height: 50px;
-	line-height: 50px;
-}
-#sidebar .widget a:hover{
-	color: #b74c94;
+#sidebar .widget_nav_menu a:hover,
+#sidebar .widget_pages a:hover,
+#sidebar .widget_recent_entries a:hover,
+#sidebar .widget_meta a:hover{
+	background-image: url( 'images/square-50x50-purple.png' ) !important;
+	background-repeat:no-repeat;
 }
 .social-button,
 .tagcloud,
@@ -165,7 +178,38 @@ header,
 	line-height: 25px;
 	border-top: 1px solid #e0e0e0;
 	border-bottom: none;
-	margin-left:50px;
+	margin-left: 0px;
+	font-size: 12px;
+}
+#sidebar .widget_nav_menu .current-menu-item a,
+#sidebar .widget_pages .current_page_item a{
+	background-image: url( 'images/square-50x50-red.png' ) !important;
+	background-repeat: repeat-y;
+	color: #EE1C24;
+}
+#sidebar .widget_nav_menu .sub-menu a,
+#sidebar .widget_pages .children a{
+	color: #8C8C8C;
+	padding: 0 0 0 100px;
+}
+#sidebar .widget_nav_menu .sub-menu a,
+#sidebar .widget_pages .children a{
+	background-image: url( 'images/square-50x50-grey.png' ) !important;
+	background-repeat: repeat-y;
+	color: #8C8C8C;
+	padding: 0 0 0 100px;
+}
+#sidebar .widget_nav_menu .sub-menu .sub-menu a,
+#sidebar .widget_pages .children .children a{
+	padding: 0 0 0 125px;
+}
+#sidebar .widget_nav_menu .sub-menu .sub-menu .sub-menu a,
+#sidebar .widget_pages .children .children .children a{
+	padding: 0 0 0 150px;
+}
+#sidebar .widget_nav_menu .sub-menu .sub-menu .sub-menu .sub-menu a,
+#sidebar .widget_pages .children .children .children .children a{
+	padding: 0 0 0 175px;
 }
 #sidebar .social-button{
     min-height: 35px;
@@ -189,24 +233,57 @@ header,
 	font-size: 14px;
 }
 /*
+ * Sidebar Facebook Widget
+ */
+#sidebar .widget_facebook_like .fb_iframe_widget,
+#sidebar .widget_facebook-send .fb_iframe_widget{
+	padding: 25px 50px 25px 50px;
+}
+/*
+ * Sidebar Gravity Forms
+ */
+#sidebar .gform_heading{
+	padding: 0 50px 0 50px;
+}
+#sidebar .gform_heading{
+	width: auto;
+}
+#sidebar .gform_wrapper{
+	margin: 0;
+}
+#sidebar .gform_footer{
+	padding: 0 50px 25px 50px;
+}
+/*
  * Content
  */
 .entry-content{
 	margin: 25px 25px 0 25px;
 	padding-bottom: 25px;
 }
-.home-content header{
+.entry-content img{
+	max-width:500px;
+	height: auto;
+}
+#content a{
+	color: #b74c94;
+}
+#content a:hover{
+	text-decoration: underline;
+}
+#content header{
 	background-color: #e0e0e0;
 	min-height: 50px;
 	width: 550px;
 	line-height: 50px;
 	margin: -4px 0 0;
+	clear:both;
 }
-.home-content header h1{
+#content header h1{
     font-size: 18px;
     font-weight: normal;
 }
-.home-content .entry-header #icon-page{
+#content .entry-header #icon-page{
 	background-color: #ee1c24;
 	color: #FFF;
 	width: 50px;
@@ -216,6 +293,30 @@ header,
 	float:left;
 	line-height: 46px;
 	margin: 0 25px 0 0;
+}
+#content blockquote{
+	margin: 0;
+	padding: 25px;
+	border: 0.1em dashed #b74c94;
+	
+}
+#content blockquote p{
+	margin: 0;
+}
+#content blockquote cite{
+	padding-top: 10px;
+	display: block;
+}
+/*
+ * Comments
+ */
+#respond
+{
+	margin: 0px 25px 0 25px;
+	padding-bottom: 25px;
+}
+.nocomments{
+	display:none;
 }
 /*
  * Forms
@@ -256,5 +357,8 @@ label{
 	float:right;
 	clear:right;
 	margin: 0 0 10px 10px;
+}
+.aligncenter{
+	
 }
 .clear{ clear:both; }

@@ -6,7 +6,7 @@
 				
 				<article id="facebook-fanpage-stream" >
 					<header class="entry-header">
-						<div id="icon-page">@</div>
+						<div id="icon-page">&nbsp;</div>
 						<h1 class="entry-title"><?php _e( 'Facebook Page', 'jusos-socialize-theme' ); ?></h1>
 					</header>
 					
