@@ -83,7 +83,7 @@ class Jusos_Socialize_Theme{
 		/**
 		 * References
 		 */
-		register_taxonomy( 'pp-reference-categories', array('pp-references'), array(
+		register_taxonomy( 'jst-person-categories', array('jst-persons'), array(
 			'show_in_nav_menus' => FALSE,
 		    'hierarchical' => TRUE,
 		    'labels' => array(
@@ -105,27 +105,27 @@ class Jusos_Socialize_Theme{
 		    'show_in_nav_menus' => TRUE
 		));
 		
-		register_post_type( 'pp-references',
+		register_post_type( 'jst-persons',
 			array(
 				'labels' => array(
-					'name' => __( 'References', 'jusos-socialize-theme' ),
-					'singular_name' => __( 'Reference', 'jusos-socialize-theme' ),
-					'all_items' => __( 'All References', 'jusos-socialize-theme' ),
-					'add_new_item' => __( 'Add new Reference', 'jusos-socialize-theme' ),
-					'edit_item' => __( 'Edit Reference', 'jusos-socialize-theme' ),
-					'new_item' => __( 'Add new Reference', 'jusos-socialize-theme' ),
-					'view_item' => __( 'View Reference', 'jusos-socialize-theme' ),
-					'search_items' => __( 'Search References', 'jusos-socialize-theme' ),
-					'not_found' => __( 'No Reference found', 'jusos-socialize-theme' ),
-					'not_found_in_trash' => __( 'No Reference found', 'jusos-socialize-theme' )
+					'name' => __( 'Persons', 'jusos-socialize-theme' ),
+					'singular_name' => __( 'Person', 'jusos-socialize-theme' ),
+					'all_items' => __( 'All Persons', 'jusos-socialize-theme' ),
+					'add_new_item' => __( 'Add new Person', 'jusos-socialize-theme' ),
+					'edit_item' => __( 'Edit Person', 'jusos-socialize-theme' ),
+					'new_item' => __( 'Add new Person', 'jusos-socialize-theme' ),
+					'view_item' => __( 'View Person', 'jusos-socialize-theme' ),
+					'search_items' => __( 'Search Persons', 'jusos-socialize-theme' ),
+					'not_found' => __( 'No Person found', 'jusos-socialize-theme' ),
+					'not_found_in_trash' => __( 'No Person found', 'jusos-socialize-theme' )
 				),
 				'public' => TRUE,
 				'has_archive' => TRUE,
 				'supports' => array( 'title', 'editor', 'thumbnail',  'page-attributes' ),
-				'taxonomies' => array( 'pp-reference-categories' ),
+				'taxonomies' => array( 'jst-person-categories' ),
 				'menu_position' => 5,
 				'rewrite' => array(
-		            'slug' => 'references',
+		            'slug' => 'persons',
 		            'with_front' => FALSE
 	            )
 					
@@ -134,9 +134,8 @@ class Jusos_Socialize_Theme{
 	}
 	
 	public function meta_boxes(){
-		// Sliders - Removing Featured image box and adding it with new title and position
 		// remove_meta_box( 'postimagediv', 'pp_sliders', 'side' );
-		// add_meta_box( 'postimagediv', __( 'Slider Image', 'jusos-socialize-theme' ), 'post_thumbnail_meta_box', 'pp_sliders', 'normal', 'high' );
+		add_meta_box( 'persons', __( 'Informations', 'jusos-socialize-theme' ), 'jst_person_metabox_form', 'jst-persons', 'normal', 'high' );
 	}
 
 	public function shortcodes(){
@@ -149,24 +148,24 @@ class Jusos_Socialize_Theme{
 	}
 	
 	public function options_page(){
-		include( JUSOS_SOCIALIZE_THEME_FOLDER . '/core/theme-options.php' ); // Theme options Page file
+		include( JUSOS_SOCIALIZE_THEME_FOLDER . 'core/theme-options.php' ); // Theme options Page file
 	}
 	
 	private function includes(){
 		/**
 		 * General
 		 */
-		include( JUSOS_SOCIALIZE_THEME_FOLDER . '/includes/tkf/loader.php' ); // Framework
+		include( JUSOS_SOCIALIZE_THEME_FOLDER . 'includes/tkf/loader.php' ); // Framework
 		
 		/**
 		 * Widgets
 		 */
-		include( JUSOS_SOCIALIZE_THEME_FOLDER . '/core/widgets/social.php' ); 
+		include( JUSOS_SOCIALIZE_THEME_FOLDER . 'core/widgets/social.php' ); 
 		
 		/**
 		 * Meta Boxes
 		 */
-		// include( JUSOS_SOCIALIZE_THEME_FOLDER . '/core/meta-boxes/slider.php' ); // Slider
+		include( JUSOS_SOCIALIZE_THEME_FOLDER . 'core/meta-boxes/persons.php' ); // Slider
 				
 		/**
 		 * Shortcodes
@@ -202,11 +201,9 @@ class Jusos_Socialize_Theme{
 	}
 	
 	public function admin_load_framework(){
-		/* Not needed yet
 		$args['forms'] = array( 'jusos-socialize-theme-config' );
 		$args['jqueryui_components'] = array( 'jquery-cookies', 'jquery-fileuploader', 'jquery-ui-tabs', 'jquery-colorpicker' );
 		tk_framework( $args );
-		*/
 	}
 	
 	public function load_framework(){

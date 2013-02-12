@@ -7,7 +7,7 @@
  * @since 1.0
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> xmlns:fb="http://ogp.me/ns/fb#">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <title><?php
@@ -29,10 +29,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <?php /* General CSS */ ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<?php /* Tablet CSS */ ?>
-<link rel="stylesheet" type="text/css" media="only screen and (min-device-width:768px) and (max-device-width:1024px)" href="<?php bloginfo( 'stylesheet_directory' ); ?>/style-tablet.css" />
-<?php /* Mobile CSS */ ?>
-<link rel="stylesheet" type="text/css" media="only screen and (max-device-width:720px)" href="<?php bloginfo( 'stylesheet_directory' ); ?>/style-mobile.css" />
 <link href='http://fonts.googleapis.com/css?family=Average+Sans|Open+Sans:700,400,800,400italic' rel='stylesheet' type='text/css'>
 <?php 
 
