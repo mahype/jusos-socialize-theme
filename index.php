@@ -2,7 +2,7 @@
 
 			<div id="content" role="main" class="clear home-content">
 				
-				<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/header-content-start.jpg" />
+				<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/jusos-gerecht-titelbild.jpg" />
 				
 				<?php while ( have_posts() ) : the_post(); // loop entries ?>
 					
