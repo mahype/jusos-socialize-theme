@@ -57,7 +57,7 @@ body{
 	<div id="page">
 		<div id="wrapper">
 			<header id="branding" role="banner">
-				<h1 id="blog_name"><?php bloginfo( 'name' ); ?></h1>
+				<!-- <h1 id="blog_name"><?php bloginfo( 'name' ); ?></h1> //-->
 				<hgroup>
 					<a href="<?php bloginfo( 'wpurl' ); ?>" title="<?php bloginfo( 'name' ); ?>"><h1 id="logo"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/jusos-logo-117x48.png" alt="<?php bloginfo( 'name' ); ?>" /></h1></a>
 				</hgroup>
